@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-zinc-950 text-white font-sans antialiased;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer utilities {
+
+  /* Gradient text helper */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400;
+  }
+
+  /* Gradient border effect */
+  .gradient-border {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    padding: 2px;
+    border-radius: 12px;
+  }
+
+  /* Glassmorphism card */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Max width container */
+  .max-container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  /* Delay utilities */
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4f46e5;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
+
+/* ── Wave hand ── */
+@keyframes wave {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(14deg);
+  }
+
+  30% {
+    transform: rotate(-8deg);
+  }
+
+  40% {
+    transform: rotate(14deg);
+  }
+
+  50% {
+    transform: rotate(-4deg);
+  }
+
+  60% {
+    transform: rotate(10deg);
+  }
+
+  70% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ── Blinking cursor ── */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ── Spinning gradient ring around profile photo ── */
+@keyframes spinRing {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Glow pulse behind profile ── */
+@keyframes glowPulse {
+
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.45;
+    transform: scale(1.05);
+  }
+}
+
+/* ── Ambient gradient orbs ── */
+@keyframes orb1 {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  33% {
+    transform: translate(40px, 30px);
+  }
+
+  66% {
+    transform: translate(-20px, 50px);
+  }
+}
+
+@keyframes orb2 {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-30px, -40px);
+  }
+}
+
+@keyframes orb3 {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  40% {
+    transform: translate(20px, -30px);
+  }
+
+  80% {
+    transform: translate(-30px, 20px);
+  }
+}
+
+/* ── Floating icon orbital motion ── */
+@keyframes iconOrbit {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(var(--dx), var(--dy));
+  }
+
+  50% {
+    transform: translate(calc(var(--dx) * -0.5), calc(var(--dy) * 1.2));
+  }
+
+  75% {
+    transform: translate(calc(var(--dx) * 0.8), calc(var(--dy) * -0.6));
+  }
+}
+
+/* ── Staggered icon entrance ── */
+@keyframes iconAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+
+  to {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+/* ── Subtle ambient particles ── */
+@keyframes particleDrift {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.05;
+  }
+
+  50% {
+    transform: translate(8px, -12px);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translate(-4px, 6px);
+    opacity: 0.08;
+  }
+}
+
+/* ── Social sidebar slide in ── */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
