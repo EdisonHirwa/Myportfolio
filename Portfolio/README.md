@@ -49,23 +49,6 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## 📧 Contact Form Setup
-
-The contact form uses **EmailJS** to send messages directly to your email.
-
-1. Create a free account at [emailjs.com](https://www.emailjs.com/)
-2. Add an email service and create a template using `{{name}}`, `{{email}}`, `{{message}}`
-3. Create a `.env` file in the project root:
-
-```env
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
-```
-
-4. Restart the dev server
-
----
 
 ## 📁 Project Structure
 
