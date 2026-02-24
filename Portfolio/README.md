@@ -1,83 +1,94 @@
-# 🚀 Edison Hirwa — Personal Portfolio
+# Edison Hirwa — Personal Portfolio
 
-A modern, responsive personal portfolio built with **React** and **Tailwind CSS**, featuring smooth animations, a dark theme, and a working contact form.
+A modern, responsive personal portfolio website built with **React** and **Tailwind CSS**. Features include smooth animations, an elegant dark theme, and a fully functional contact form.
 
-🔗 **Live:** [edisonhirwa.github.io/Myportfolio](https://edisonhirwa.github.io/Myportfolio) *(coming soon)*
-
----
-
-## ✨ Features
-
-- **Animated Hero** — Typewriter effect, floating tech icons, spinning gradient ring, and ambient particles
-- **About Section** — Personal info card with profile photo and quick-fact chips
-- **Skills Grid** — Tools & platforms displayed with official SVG icons
-- **Projects Showcase** — Featured project cards with live demo and source links
-- **Contact Form** — Functional email delivery via [EmailJS](https://www.emailjs.com/)
-- **Fully Responsive** — Mobile-first design with smooth transitions
-- **Dark Theme** — Sleek zinc/indigo color palette with glassmorphism cards
+**Live Site:** [edisonhirwa.github.io/Myportfolio](https://edisonhirwa.github.io/Myportfolio)
 
 ---
 
-## 🛠 Tech Stack
+## ✨ Key Features
 
-| Category    | Technology                     |
-| ----------- | ------------------------------ |
-| Framework   | React 19                       |
-| Build Tool  | Vite                           |
-| Styling     | Tailwind CSS v3                |
-| Icons       | Lucide React + Custom SVGs     |
-| Email       | EmailJS                        |
-| Deployment  | GitHub Pages *(planned)*       |
+- **Interactive Hero Section** — Typewriter effect with floating tech icons, animated gradient ring, and particle animations
+- **About Me** — Professional profile section with photo, biography, and key highlights
+- **Skills Showcase** — Organized grid of technical tools and platforms with official icons
+- **Project Portfolio** — Curated project cards with descriptions, live demos, and source code links
+- **Contact Form** — Fully functional email system powered by [EmailJS](https://www.emailjs.com/)
+- **Responsive Design** — Mobile-first approach with seamless experience across all devices
+- **Modern Aesthetics** — Dark theme with zinc/indigo palette and glassmorphism UI elements
 
 ---
 
-## 📦 Getting Started
+## 🛠 Technology Stack
+
+| Component   | Technology            |
+| ----------- | --------------------- |
+| Framework   | React 19              |
+| Build Tool  | Vite                  |
+| Styling     | Tailwind CSS v3       |
+| Icons       | Lucide React + SVGs   |
+| Email       | EmailJS               |
+| Hosting     | GitHub Pages          |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v16+)
+- npm or yarn
+
+### Installation
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/EdisonHirwa/Myportfolio.git
 cd Myportfolio/Portfolio
 
 # Install dependencies
 npm install
 
-# Start dev server
+# Start the development server
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open [http://localhost:5173](http://localhost:5173) in your browser to view the portfolio.
 
 ---
-
 
 ## 📁 Project Structure
 
 ```
 Portfolio/
-├── public/
+├── public/                  # Static assets
 ├── src/
-│   ├── assets/          # Profile image
+│   ├── assets/              # Images and media
 │   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── About.jsx
-│   │   ├── Skills.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Contact.jsx
-│   │   └── Footer.jsx
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── tailwind.config.js
-├── vite.config.js
-└── package.json
+│   │   ├── Navbar.jsx       # Navigation bar
+│   │   ├── Hero.jsx         # Hero section
+│   │   ├── About.jsx        # About section
+│   │   ├── Skills.jsx       # Skills grid
+│   │   ├── Projects.jsx     # Project showcase
+│   │   ├── Contact.jsx      # Contact form
+│   │   └── Footer.jsx       # Footer
+│   ├── App.jsx              # Main app component
+│   ├── main.jsx             # Entry point
+│   └── index.css            # Global styles
+├── tailwind.config.js       # Tailwind configuration
+├── vite.config.js           # Vite configuration
+└── package.json             # Dependencies
 ```
 
 ---
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE) — feel free to use it as a reference or template.
+
+---
+
+## 👤 About
+
+Created by **Edison Hirwa**. Feel free to reach out via the contact form or connect on social media.
 
 ---
 
