@@ -24,9 +24,9 @@ const missionCards = [
     },
     {
         icon: '❤️',
-        title: 'What I Love',
+        title: 'Hobbies & Interests',
         description:
-            'Crafting pixel-perfect UIs, exploring new JavaScript frameworks, solving complex problems, and mentoring aspiring developers in the developer community.',
+            'Crafting pixel-perfect UIs, exploring new JavaScript frameworks, solving complex problems, reading books, playing volleyball, and listening to music.',
     },
 ];
 
