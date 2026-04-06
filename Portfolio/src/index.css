@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,247 +20,163 @@
 
 @layer utilities {
 
-  /* Gradient text helper */
+  /* ── Gradient text ── */
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #a78bfa 0%, #e879f9 60%, #22d3ee 100%);
   }
 
-  /* Gradient border effect */
+  /* ── Brand gradient border wrapper ── */
   .gradient-border {
-    background: linear-gradient(135deg, #6366f1, #a855f7);
-    padding: 2px;
-    border-radius: 12px;
+    background: linear-gradient(135deg, #8b5cf6, #d946ef, #06b6d4);
+    padding: 1.5px;
+    border-radius: 14px;
   }
 
-  /* Glassmorphism card */
+  /* ── Glassmorphism card ── */
   .glass-card {
-    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl;
+    @apply bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] rounded-2xl;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,0.05) inset;
   }
 
-  /* Section padding */
+  /* ── Section padding ── */
   .section-padding {
-    @apply py-20 px-4 sm:px-6 lg:px-8;
+    @apply py-24 px-4 sm:px-6 lg:px-8;
   }
 
-  /* Max width container */
+  /* ── Max-width container ── */
   .max-container {
     @apply max-w-6xl mx-auto;
   }
 
-  /* Delay utilities */
-  .animation-delay-200 {
-    animation-delay: 200ms;
+  /* ── Glow utilities ── */
+  .glow-brand {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.35), 0 0 60px rgba(139, 92, 246, 0.15);
+  }
+  .glow-fuchsia {
+    box-shadow: 0 0 30px rgba(217, 70, 239, 0.35), 0 0 60px rgba(217, 70, 239, 0.15);
+  }
+  .glow-cyan {
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.20), 0 0 50px rgba(34, 211, 238, 0.10);
   }
 
-  .animation-delay-400 {
-    animation-delay: 400ms;
+  /* ── Icon orbit glow ── */
+  .icon-glow {
+    filter: drop-shadow(0 0 6px currentColor);
   }
 
-  .animation-delay-600 {
-    animation-delay: 600ms;
-  }
-
-  .animation-delay-800 {
-    animation-delay: 800ms;
-  }
+  /* ── Delay utilities ── */
+  .animation-delay-100  { animation-delay: 100ms; }
+  .animation-delay-200  { animation-delay: 200ms; }
+  .animation-delay-300  { animation-delay: 300ms; }
+  .animation-delay-400  { animation-delay: 400ms; }
+  .animation-delay-500  { animation-delay: 500ms; }
+  .animation-delay-600  { animation-delay: 600ms; }
+  .animation-delay-800  { animation-delay: 800ms; }
+  .animation-delay-1000 { animation-delay: 1000ms; }
 }
 
-/* Custom scrollbar */
+/* ══════════════════════════════════════
+   Custom scrollbar — brand violet
+══════════════════════════════════════ */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
-
 ::-webkit-scrollbar-track {
   background: #09090b;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #4f46e5;
-  border-radius: 3px;
+  background: linear-gradient(180deg, #8b5cf6, #d946ef);
+  border-radius: 99px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #a855f7;
+  background: linear-gradient(180deg, #a78bfa, #e879f9);
 }
 
-/* ── Wave hand ── */
+/* ══════════════════════════════════════
+   Keyframes
+══════════════════════════════════════ */
+
+/* Wave hand */
 @keyframes wave {
-
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-
-  15% {
-    transform: rotate(14deg);
-  }
-
-  30% {
-    transform: rotate(-8deg);
-  }
-
-  40% {
-    transform: rotate(14deg);
-  }
-
-  50% {
-    transform: rotate(-4deg);
-  }
-
-  60% {
-    transform: rotate(10deg);
-  }
-
-  70% {
-    transform: rotate(0deg);
-  }
+  0%, 100% { transform: rotate(0deg);   }
+  15%       { transform: rotate(14deg);  }
+  30%       { transform: rotate(-8deg);  }
+  40%       { transform: rotate(14deg);  }
+  50%       { transform: rotate(-4deg);  }
+  60%       { transform: rotate(10deg);  }
+  70%       { transform: rotate(0deg);   }
 }
 
-/* ── Blinking cursor ── */
+/* Blinking cursor */
 @keyframes blink {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
 
-/* ── Spinning gradient ring around profile photo ── */
+/* Spinning gradient ring */
 @keyframes spinRing {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(360deg); }
 }
 
-/* ── Glow pulse behind profile ── */
+/* Glow pulse */
 @keyframes glowPulse {
-
-  0%,
-  100% {
-    opacity: 0.25;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.45;
-    transform: scale(1.05);
-  }
+  0%, 100% { opacity: 0.2; transform: scale(1);    }
+  50%       { opacity: 0.5; transform: scale(1.07); }
 }
 
-/* ── Ambient gradient orbs ── */
+/* Ambient gradient orbs */
 @keyframes orb1 {
-
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  33% {
-    transform: translate(40px, 30px);
-  }
-
-  66% {
-    transform: translate(-20px, 50px);
-  }
+  0%, 100% { transform: translate(0, 0);         }
+  33%       { transform: translate(50px, 30px);   }
+  66%       { transform: translate(-25px, 55px);  }
 }
-
 @keyframes orb2 {
-
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(-30px, -40px);
-  }
+  0%, 100% { transform: translate(0, 0);          }
+  50%       { transform: translate(-35px, -45px); }
 }
-
 @keyframes orb3 {
-
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  40% {
-    transform: translate(20px, -30px);
-  }
-
-  80% {
-    transform: translate(-30px, 20px);
-  }
+  0%, 100% { transform: translate(0, 0);          }
+  40%       { transform: translate(25px, -30px);  }
+  80%       { transform: translate(-30px, 25px);  }
 }
 
-/* ── Floating icon orbital motion ── */
+/* Floating icon orbital drift */
 @keyframes iconOrbit {
-
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  25% {
-    transform: translate(var(--dx), var(--dy));
-  }
-
-  50% {
-    transform: translate(calc(var(--dx) * -0.5), calc(var(--dy) * 1.2));
-  }
-
-  75% {
-    transform: translate(calc(var(--dx) * 0.8), calc(var(--dy) * -0.6));
-  }
+  0%, 100% { transform: translate(0, 0); }
+  25%       { transform: translate(var(--dx), var(--dy)); }
+  50%       { transform: translate(calc(var(--dx) * -0.5), calc(var(--dy) * 1.2)); }
+  75%       { transform: translate(calc(var(--dx) * 0.8), calc(var(--dy) * -0.6)); }
 }
 
-/* ── Staggered icon entrance ── */
+/* Icon appear */
 @keyframes iconAppear {
-  from {
-    opacity: 0;
-    transform: scale(0.4);
-  }
-
-  to {
-    opacity: 0.5;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.3) rotate(-10deg); }
+  to   { opacity: 1; transform: scale(1)   rotate(0deg);   }
 }
 
-/* ── Subtle ambient particles ── */
+/* Particle drift */
 @keyframes particleDrift {
-  0% {
-    transform: translate(0, 0);
-    opacity: 0.05;
-  }
-
-  50% {
-    transform: translate(8px, -12px);
-    opacity: 0.2;
-  }
-
-  100% {
-    transform: translate(-4px, 6px);
-    opacity: 0.08;
-  }
+  0%   { transform: translate(0, 0);        opacity: 0.06; }
+  50%  { transform: translate(10px, -14px); opacity: 0.22; }
+  100% { transform: translate(-5px, 7px);   opacity: 0.08; }
 }
 
-/* ── Social sidebar slide in ── */
+/* Social sidebar slide in */
 @keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
 
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* Shimmer sweep */
+@keyframes shimmer {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%);  }
+}
+
+/* Icon pulse ring */
+@keyframes iconRing {
+  0%   { transform: scale(1);    opacity: 0.6; }
+  100% { transform: scale(2.2);  opacity: 0;   }
 }

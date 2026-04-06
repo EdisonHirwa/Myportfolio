@@ -1,17 +1,17 @@
-import { Github, Linkedin, Twitter, Heart } from 'lucide-react';
+import { Github, Linkedin, Twitter, Heart, Code2 } from 'lucide-react';
 
 const socialLinks = [
-    { icon: Github, href: 'https://github.com/', label: 'GitHub' },
+    { icon: Github,   href: 'https://github.com/',      label: 'GitHub'   },
     { icon: Linkedin, href: 'https://linkedin.com/in/', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/', label: 'Twitter' },
+    { icon: Twitter,  href: 'https://twitter.com/',     label: 'Twitter'  },
 ];
 
 const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
+    { label: 'Home',     href: '#home'     },
+    { label: 'About',    href: '#about'    },
+    { label: 'Skills',   href: '#skills'   },
     { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Contact',  href: '#contact'  },
 ];
 
 const Footer = () => {
@@ -21,32 +21,37 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-zinc-950 border-t border-white/5">
+        <footer className="relative bg-zinc-950 border-t border-white/[0.05]">
+            {/* Top gradient line */}
+            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #8b5cf660, #d946ef60, transparent)' }} />
+
             <div className="max-container px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid sm:grid-cols-3 gap-8 mb-10">
                     {/* Brand */}
                     <div>
-                        <a href="#home" onClick={(e) => handleClick(e, '#home')} className="text-xl font-bold">
-                            Edison<span className="gradient-text">.</span>
+                        <a href="#home" onClick={(e) => handleClick(e, '#home')} className="inline-flex items-center gap-2 mb-3">
+                            <Code2 size={18} className="text-brand-400" />
+                            <span className="text-xl font-black text-white">
+                                Edison<span className="gradient-text">.</span>
+                            </span>
                         </a>
-                        <p className="text-zinc-500 text-sm mt-3 leading-relaxed max-w-xs">
+                        <p className="text-zinc-500 text-sm leading-relaxed max-w-xs">
                             Frontend Developer crafting beautiful web experiences from Rwanda, Africa.
                         </p>
                     </div>
 
                     {/* Quick links */}
                     <div>
-                        <h4 className="text-xs font-semibold text-zinc-500 uppercase tracking-widest mb-4">
-                            Quick Links
-                        </h4>
+                        <h4 className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-4">Quick Links</h4>
                         <ul className="space-y-2">
                             {navLinks.map(({ label, href }) => (
                                 <li key={label}>
                                     <a
                                         href={href}
                                         onClick={(e) => handleClick(e, href)}
-                                        className="text-zinc-400 hover:text-white text-sm transition-colors"
+                                        className="text-zinc-400 hover:text-brand-400 text-sm transition-colors duration-200 flex items-center gap-1.5 group"
                                     >
+                                        <span className="w-0 group-hover:w-3 h-px bg-gradient-to-r from-brand-400 to-fuchsia-400 transition-all duration-300 rounded-full" />
                                         {label}
                                     </a>
                                 </li>
@@ -56,9 +61,7 @@ const Footer = () => {
 
                     {/* Social */}
                     <div>
-                        <h4 className="text-xs font-semibold text-zinc-500 uppercase tracking-widest mb-4">
-                            Connect
-                        </h4>
+                        <h4 className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-4">Connect</h4>
                         <div className="flex gap-3">
                             {socialLinks.map(({ icon: Icon, href, label }) => (
                                 <a
@@ -67,7 +70,7 @@ const Footer = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={label}
-                                    className="p-2.5 rounded-lg glass-card text-zinc-400 hover:text-white hover:border-indigo-500/40 transition-all duration-200"
+                                    className="p-2.5 rounded-xl glass-card text-zinc-400 hover:text-white hover:border-brand-500/35 hover:-translate-y-1 transition-all duration-300"
                                 >
                                     <Icon size={17} />
                                 </a>
@@ -77,13 +80,14 @@ const Footer = () => {
                 </div>
 
                 {/* Divider */}
-                <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p className="text-zinc-600 text-sm flex items-center gap-1.5">
+                <div className="border-t border-white/[0.05] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p className="text-zinc-600 text-sm">
                         © {new Date().getFullYear()} Edison Hirwa. All rights reserved.
                     </p>
                     <p className="text-zinc-600 text-sm flex items-center gap-1.5">
-                        Built with <Heart size={12} className="text-red-500 fill-red-500" /> using React &
-                        Tailwind CSS
+                        Built with{' '}
+                        <Heart size={11} className="text-fuchsia-500 fill-fuchsia-500" />{' '}
+                        using React & Tailwind CSS
                     </p>
                 </div>
             </div>

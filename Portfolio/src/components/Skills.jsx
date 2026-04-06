@@ -165,17 +165,17 @@ const tools = [
 /* ─── Tool Card ─── */
 const ToolCard = ({ name, icon: Icon, bg, border, hoverBorder, color }) => (
     <div
-        className={`glass-card ${bg} border ${border} ${hoverBorder} p-6 flex flex-col items-center gap-4 hover:-translate-y-2 transition-all duration-300 group`}
+        className={`glass-card ${bg} border ${border} ${hoverBorder} p-6 flex flex-col items-center gap-4 hover:-translate-y-2 transition-all duration-300 group cursor-default`}
     >
-        {/* Icon */}
-        <div className="p-3 rounded-2xl bg-white/5 group-hover:bg-white/10 transition-colors">
+        {/* Icon wrapper */}
+        <div className="p-3 rounded-2xl bg-white/[0.04] group-hover:bg-white/[0.08] transition-colors group-hover:scale-110 transform duration-300">
             <Icon />
         </div>
         {/* Name */}
-        <h3 className="text-white font-semibold text-sm">{name}</h3>
+        <h3 className="text-white font-semibold text-sm text-center">{name}</h3>
         {/* Accent line */}
         <div
-            className={`w-8 h-0.5 rounded-full bg-gradient-to-r ${color} opacity-50 group-hover:opacity-100 group-hover:w-12 transition-all duration-300`}
+            className={`w-8 h-0.5 rounded-full bg-gradient-to-r ${color} opacity-40 group-hover:opacity-100 group-hover:w-14 transition-all duration-400`}
         />
     </div>
 );
@@ -183,34 +183,37 @@ const ToolCard = ({ name, icon: Icon, bg, border, hoverBorder, color }) => (
 /* ─── Skills Section ─── */
 const Skills = () => {
     return (
-        <section id="skills" className="section-padding bg-zinc-900/50">
-            <div className="max-container">
+        <section id="skills" className="section-padding relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #09090b 0%, #0c0818 50%, #09090b 100%)' }}>
+            {/* ambient orb */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-600/[0.05] rounded-full blur-[120px] pointer-events-none" />
+
+            <div className="max-container relative">
                 {/* Section header */}
                 <div className="text-center mb-16">
-                    <p className="text-sm font-semibold tracking-widest text-indigo-400 uppercase mb-3">
+                    <p className="text-xs font-bold tracking-[0.25em] text-brand-400 uppercase mb-3">
                         What I work with
                     </p>
                     <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
-                        Tools & <span className="gradient-text">Platforms</span>
+                        Tools &amp; <span className="gradient-text">Platforms</span>
                     </h2>
-                    <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mx-auto mb-6" />
+                    <div className="w-16 h-1 rounded-full mx-auto mb-6" style={{ background: 'linear-gradient(90deg, #8b5cf6, #d946ef)' }} />
                     <p className="text-zinc-400 max-w-xl mx-auto text-base sm:text-lg">
                         The technologies and tools I use to build modern, responsive web applications.
                     </p>
                 </div>
 
                 {/* Tools Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
                     {tools.map((tool) => (
                         <ToolCard key={tool.name} {...tool} />
                     ))}
                 </div>
 
                 {/* Bottom banner */}
-                <div className="mt-12 glass-card p-6 sm:p-8 text-center">
+                <div className="mt-12 glass-card p-6 sm:p-8 text-center border-brand-500/15 bg-gradient-to-r from-brand-500/[0.05] to-fuchsia-500/[0.05]">
                     <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
                         Always learning.{' '}
-                        <span className="gradient-text font-semibold">Currently exploring</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400 font-semibold">Currently exploring</span>
                         {' '}Node.js, Next.js, and full-stack web development.
                     </p>
                 </div>

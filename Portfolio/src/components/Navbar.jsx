@@ -1,26 +1,23 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, FileText, Sparkles } from 'lucide-react';
 import profileImg from '../assets/profile 2026-02-24 at 12.48.45 PM.jpeg';
 
-// Navigation links
 const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
+    { label: 'Home',     href: '#home'     },
+    { label: 'About',    href: '#about'    },
+    { label: 'Skills',   href: '#skills'   },
     { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Contact',  href: '#contact'  },
 ];
 
 const Navbar = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled,   setIsScrolled]   = useState(false);
+    const [isMenuOpen,   setIsMenuOpen]   = useState(false);
     const [activeSection, setActiveSection] = useState('home');
 
-    // Detect scroll & active section
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
-
             const sections = navLinks.map((l) => l.href.slice(1));
             const current = sections.find((id) => {
                 const el = document.getElementById(id);
@@ -34,7 +31,6 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Smooth scroll handler
     const handleNavClick = (e, href) => {
         e.preventDefault();
         setIsMenuOpen(false);
@@ -43,48 +39,57 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? 'bg-zinc-900/90 backdrop-blur-xl shadow-lg shadow-black/30 border-b border-white/5'
-                    : 'bg-zinc-900/70 backdrop-blur-md border-b border-white/5'
-                }`}
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+                isScrolled
+                    ? 'bg-zinc-950/90 backdrop-blur-2xl shadow-lg shadow-black/40 border-b border-white/[0.06]'
+                    : 'bg-transparent'
+            }`}
         >
-            <div className="max-w-6xl mx-auto flex items-center justify-between h-14 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
+
                 {/* ── Left: Avatar + Name ── */}
                 <a
                     href="#home"
                     onClick={(e) => handleNavClick(e, '#home')}
                     className="flex items-center gap-3 group"
                 >
-                    <img
-                        src={profileImg}
-                        alt="Edison Hirwa"
-                        className="w-8 h-8 rounded-full object-cover border border-white/20 group-hover:border-indigo-500/60 transition-colors"
-                    />
+                    <div className="relative">
+                        {/* Glow ring */}
+                        <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-brand-500 to-fuchsia-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-[2px]" />
+                        <img
+                            src={profileImg}
+                            alt="Edison Hirwa"
+                            className="relative w-8 h-8 rounded-full object-cover border border-white/10"
+                        />
+                    </div>
                     <span className="text-sm font-bold tracking-wider uppercase text-white">
-                        Edison Hirwa
+                        Edison<span className="gradient-text">.</span>Hirwa
                     </span>
                 </a>
 
                 {/* ── Center: Nav links (desktop) ── */}
                 <ul className="hidden md:flex items-center gap-1">
-                    {navLinks.map(({ label, href }) => (
-                        <li key={label}>
-                            <a
-                                href={href}
-                                onClick={(e) => handleNavClick(e, href)}
-                                className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 ${activeSection === href.slice(1)
-                                        ? 'text-white'
-                                        : 'text-zinc-400 hover:text-white'
+                    {navLinks.map(({ label, href }) => {
+                        const isActive = activeSection === href.slice(1);
+                        return (
+                            <li key={label}>
+                                <a
+                                    href={href}
+                                    onClick={(e) => handleNavClick(e, href)}
+                                    className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                                        isActive
+                                            ? 'text-white'
+                                            : 'text-zinc-400 hover:text-white hover:bg-white/[0.05]'
                                     }`}
-                            >
-                                {label}
-                                {/* Active underline indicator */}
-                                {activeSection === href.slice(1) && (
-                                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-5 h-0.5 bg-white rounded-full" />
-                                )}
-                            </a>
-                        </li>
-                    ))}
+                                >
+                                    {label}
+                                    {isActive && (
+                                        <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-0.5 rounded-full bg-gradient-to-r from-brand-400 to-fuchsia-400" />
+                                    )}
+                                </a>
+                            </li>
+                        );
+                    })}
                 </ul>
 
                 {/* ── Right: Resume button ── */}
@@ -92,46 +97,59 @@ const Navbar = () => {
                     <a
                         href="#contact"
                         onClick={(e) => handleNavClick(e, '#contact')}
-                        className="px-5 py-1.5 text-sm font-medium rounded-full border border-white/20 text-white hover:bg-white hover:text-zinc-900 transition-all duration-300"
+                        className="group relative flex items-center gap-2 px-5 py-2 text-sm font-semibold rounded-full overflow-hidden border border-brand-500/40 text-white transition-all duration-300 hover:border-brand-400/70 hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]"
                     >
-                        Resume
+                        {/* gradient fill on hover */}
+                        <span className="absolute inset-0 bg-gradient-to-r from-brand-600/30 to-fuchsia-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <FileText size={14} className="relative text-brand-400" />
+                        <span className="relative">Resume</span>
                     </a>
                 </div>
 
                 {/* ── Mobile hamburger ── */}
                 <button
-                    className="md:hidden p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-white/5 transition-colors"
+                    id="nav-mobile-toggle"
+                    className="md:hidden p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-white/[0.06] transition-colors"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     aria-label="Toggle menu"
                 >
-                    {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+                    {isMenuOpen
+                        ? <X size={22} className="text-fuchsia-400" />
+                        : <Menu size={22} />
+                    }
                 </button>
             </div>
 
             {/* ── Mobile dropdown ── */}
             {isMenuOpen && (
-                <div className="md:hidden animate-slide-down bg-zinc-900/95 backdrop-blur-xl border-b border-white/5">
+                <div className="md:hidden animate-slide-down bg-zinc-950/98 backdrop-blur-2xl border-b border-white/[0.06]">
                     <ul className="flex flex-col px-4 py-4 gap-1">
-                        {navLinks.map(({ label, href }) => (
-                            <li key={label}>
-                                <a
-                                    href={href}
-                                    onClick={(e) => handleNavClick(e, href)}
-                                    className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${activeSection === href.slice(1)
-                                            ? 'text-white bg-white/10'
-                                            : 'text-zinc-400 hover:text-white hover:bg-white/5'
+                        {navLinks.map(({ label, href }) => {
+                            const isActive = activeSection === href.slice(1);
+                            return (
+                                <li key={label}>
+                                    <a
+                                        href={href}
+                                        onClick={(e) => handleNavClick(e, href)}
+                                        className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${
+                                            isActive
+                                                ? 'text-white bg-brand-500/15 border border-brand-500/25'
+                                                : 'text-zinc-400 hover:text-white hover:bg-white/[0.05]'
                                         }`}
-                                >
-                                    {label}
-                                </a>
-                            </li>
-                        ))}
+                                    >
+                                        {isActive && <Sparkles size={12} className="text-fuchsia-400" />}
+                                        {label}
+                                    </a>
+                                </li>
+                            );
+                        })}
                         <li className="pt-2">
                             <a
                                 href="#contact"
                                 onClick={(e) => handleNavClick(e, '#contact')}
-                                className="block text-center px-4 py-3 rounded-full text-sm font-medium border border-white/20 text-white hover:bg-white hover:text-zinc-900 transition-all"
+                                className="flex items-center justify-center gap-2 px-4 py-3 rounded-full text-sm font-semibold border border-brand-500/40 text-white bg-gradient-to-r from-brand-600/20 to-fuchsia-600/20 hover:from-brand-600/40 hover:to-fuchsia-600/40 transition-all"
                             >
+                                <FileText size={14} className="text-brand-400" />
                                 Resume
                             </a>
                         </li>
