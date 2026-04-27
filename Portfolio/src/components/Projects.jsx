@@ -3,53 +3,13 @@ import ProjectCard from './ProjectCard';
 
 const projects = [
     {
-        title: 'Real-Time Chat App',
-        description: 'A modern real-time messaging application with user authentication, chat rooms, and responsive design.',
-        image: 'https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=600&q=80',
-        tags: ['React', 'Node.js', 'Socket.io', 'Tailwind CSS'],
-        githubUrl: 'https://github.com/',
-        liveUrl: '#',
-    },
-    {
         title: 'Portfolio Website V1',
         description: 'My first personal portfolio website built with HTML, CSS and vanilla JavaScript. Clean and minimal design.',
         image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80',
         tags: ['HTML', 'CSS', 'JavaScript'],
         githubUrl: 'https://github.com/',
         liveUrl: '#',
-    },
-    {
-        title: 'E-Commerce UI',
-        description: 'Modern e-commerce front-end with product listings, cart functionality, and smooth checkout experience.',
-        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80',
-        tags: ['React', 'Tailwind CSS', 'Context API'],
-        githubUrl: 'https://github.com/',
-        liveUrl: '#',
-    },
-    {
-        title: 'Weather App',
-        description: 'A beautiful weather application using OpenWeatherMap API with location search and 5-day forecast display.',
-        image: 'https://images.unsplash.com/photo-1504608524841-42584120d693?w=600&q=80',
-        tags: ['React', 'API Integration', 'CSS'],
-        githubUrl: 'https://github.com/',
-        liveUrl: '#',
-    },
-    {
-        title: 'Blog Platform',
-        description: 'Full-featured blog platform with markdown support, categories, tags, and a clean reading experience.',
-        image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&q=80',
-        tags: ['React', 'JavaScript', 'Tailwind CSS'],
-        githubUrl: 'https://github.com/',
-        liveUrl: '#',
-    },
-    {
-        title: 'Task Manager',
-        description: 'Productivity app with drag-and-drop task boards, priority labels, due dates, and local storage persistence.',
-        image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&q=80',
-        tags: ['React', 'DnD', 'LocalStorage'],
-        githubUrl: 'https://github.com/',
-        liveUrl: '#',
-    },
+    }
 ];
 
 const Projects = () => {
