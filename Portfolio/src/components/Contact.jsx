@@ -1,11 +1,10 @@
 import { useState, useRef } from 'react';
-import { Github, Linkedin, Twitter, Mail, MapPin, Send, Loader2, MessageSquare, CheckCircle2 } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Send, Loader2, MessageSquare, CheckCircle2 } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const socialLinks = [
     { icon: Github,   href: 'https://github.com/',      label: 'GitHub',   color: '#a78bfa', bg: 'rgba(167,139,250,0.1)' },
     { icon: Linkedin, href: 'https://linkedin.com/in/', label: 'LinkedIn', color: '#0a66c2', bg: 'rgba(10,102,194,0.1)'   },
-    { icon: Twitter,  href: 'https://twitter.com/',     label: 'Twitter',  color: '#1d9bf0', bg: 'rgba(29,155,240,0.1)'   },
 ];
 
 const Contact = () => {

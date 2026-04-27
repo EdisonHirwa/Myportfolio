@@ -82,11 +82,11 @@ const About = () => {
                                 {/* Mini stats */}
                                 <div className="grid grid-cols-2 gap-3 w-full">
                                     <div className="bg-white/[0.05] rounded-xl p-3 text-center border border-white/[0.07]">
-                                        <p className="text-brand-400 font-black text-xl">2+</p>
-                                        <p className="text-zinc-500 text-xs mt-0.5">Years Coding</p>
+                                        <p className="text-brand-400 font-black text-xl">1</p>
+                                        <p className="text-zinc-500 text-xs mt-0.5">Year Coding</p>
                                     </div>
                                     <div className="bg-white/[0.05] rounded-xl p-3 text-center border border-white/[0.07]">
-                                        <p className="text-fuchsia-400 font-black text-xl">10+</p>
+                                        <p className="text-fuchsia-400 font-black text-xl">4</p>
                                         <p className="text-zinc-500 text-xs mt-0.5">Projects Built</p>
                                     </div>
                                 </div>

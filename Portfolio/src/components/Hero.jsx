@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import {
-    Github, Linkedin, Twitter, Mail,
+    Github, Linkedin,
     Code2, Globe, Figma, Terminal, Layers,
     Cpu, Wifi, Database, GitBranch, Layout,
     Braces, Smartphone, Server, Zap, Package,
@@ -25,8 +25,6 @@ const floatingIcons = [
 const socialLinks = [
     { icon: Linkedin, href: 'https://linkedin.com/in/', label: 'LinkedIn', color: '#0a66c2' },
     { icon: Github, href: 'https://github.com/', label: 'GitHub', color: '#a78bfa' },
-    { icon: Twitter, href: 'https://twitter.com/', label: 'Twitter', color: '#1d9bf0' },
-    { icon: Mail, href: 'mailto:hirwae@example.com', label: 'Email', color: '#e879f9' },
 ];
 
 const roles = [

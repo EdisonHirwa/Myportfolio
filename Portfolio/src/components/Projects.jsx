@@ -9,6 +9,30 @@ const projects = [
         tags: ['HTML', 'CSS', 'JavaScript'],
         githubUrl: 'https://github.com/',
         liveUrl: '#',
+    },
+    {
+        title: 'StockConnect',
+        description: 'A premium, real-time stock trading simulation platform for education and professional market training with distinct roles for Super Admin, Market Admin, and Trader.',
+        image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80',
+        tags: ['Java', 'Spring Boot', 'React', 'Tailwind CSS'],
+        githubUrl: 'https://github.com/EdisonHirwa/StockConnect',
+        liveUrl: 'https://www.stockconnect.live/',
+    },
+    {
+        title: 'TalentAI',
+        description: 'AI-powered talent screening and applicant management platform.',
+        image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&q=80',
+        tags: ['Next.js', 'React', 'Tailwind CSS'],
+        githubUrl: '#',
+        liveUrl: 'https://talent-lens-ochre.vercel.app/',
+    },
+    {
+        title: 'QueryMe',
+        description: 'A frontend application designed to interact with data sources, featuring document export capabilities like PDF and Excel formats.',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
+        tags: ['React', 'TypeScript', 'Vite', 'Axios'],
+        githubUrl: 'https://github.com/EdisonHirwa/QueryMe-frontend',
+        liveUrl: '#',
     }
 ];
 
@@ -45,7 +69,7 @@ const Projects = () => {
                 {/* GitHub CTA */}
                 <div className="text-center mt-12">
                     <a
-                        href="https://github.com/"
+                        href="https://github.com/EdisonHirwa"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-xl border border-white/10 text-zinc-300 hover:text-white hover:border-brand-500/40 hover:bg-brand-500/[0.07] font-semibold transition-all duration-300 hover:-translate-y-0.5"
