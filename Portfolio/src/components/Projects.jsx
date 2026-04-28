@@ -40,19 +40,19 @@ const Projects = () => {
     return (
         <section id="projects" className="section-padding bg-zinc-950 relative overflow-hidden">
             {/* ambient orb */}
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-fuchsia-500/[0.05] rounded-full blur-[130px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/[0.05] rounded-full blur-[130px] pointer-events-none" />
 
             <div className="max-container relative">
                 {/* Section header */}
                 <div className="text-center mb-16">
                     <p className="text-xs font-bold tracking-[0.25em] text-brand-400 uppercase mb-3 flex items-center justify-center gap-2">
-                        <FolderOpen size={13} className="text-fuchsia-400" />
+                        <FolderOpen size={13} className="text-blue-400" />
                         What I've built
                     </p>
                     <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
                         My <span className="gradient-text">Projects</span>
                     </h2>
-                    <div className="w-16 h-1 rounded-full mx-auto mb-6" style={{ background: 'linear-gradient(90deg, #8b5cf6, #d946ef)' }} />
+                    <div className="w-16 h-1 rounded-full mx-auto mb-6" style={{ background: 'linear-gradient(90deg, #06b6d4, #22d3ee)' }} />
                     <p className="text-zinc-400 max-w-xl mx-auto text-base sm:text-lg">
                         A selection of projects that showcase my skills across frontend development and
                         interface design.

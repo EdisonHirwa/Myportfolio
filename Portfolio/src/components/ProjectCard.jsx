@@ -1,17 +1,17 @@
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 
 /**
- * ProjectCard — hover overlay with brand violet/fuchsia accent
+ * ProjectCard — hover overlay with brand cyan/blue accent
  */
 const ProjectCard = ({ title, description, image, tags, githubUrl, liveUrl }) => {
     return (
-        <div className="group relative glass-card overflow-hidden hover:-translate-y-2 transition-all duration-400 hover:border-brand-500/25 hover:shadow-[0_8px_40px_rgba(139,92,246,0.15)]">
+        <div className="group relative glass-card overflow-hidden hover:-translate-y-2 transition-all duration-400 hover:border-brand-500/25 hover:shadow-[0_8px_40px_rgba(6, 182, 212, 0.15)]">
             {/* Project image */}
             <div className="relative h-52 overflow-hidden">
                 <img
                     src={image}
                     alt={`${title} screenshot`}
-                    loading="lazy"
+                    loading="lazy"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {/* Gradient overlay */}
@@ -37,8 +37,8 @@ const ProjectCard = ({ title, description, image, tags, githubUrl, liveUrl }) =>
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-white transition-all duration-200"
                             style={{
-                                background: 'linear-gradient(135deg, #8b5cf6, #d946ef)',
-                                boxShadow:  '0 0 20px rgba(139,92,246,0.4)',
+                                background: 'linear-gradient(135deg, #06b6d4, #22d3ee)',
+                                boxShadow:  '0 0 20px rgba(6, 182, 212, 0.4)',
                             }}
                         >
                             <ExternalLink size={14} />

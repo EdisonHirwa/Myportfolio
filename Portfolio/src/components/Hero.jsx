@@ -10,21 +10,21 @@ import profileImg from '../assets/profile 2026-02-24 at 12.48.45 PM.jpeg';
 
 /* ─── Floating Lucide icons with individual orbital paths ─── */
 const floatingIcons = [
-    { icon: Code2, top: '10%', left: '5%', dur: 7, dx: 14, dy: 20, color: '#a78bfa' },
+    { icon: Code2, top: '10%', left: '5%', dur: 7, dx: 14, dy: 20, color: '#06b6d4' },
     { icon: Braces, top: '25%', left: '12%', dur: 9, dx: -10, dy: 16, color: '#f0db4f' },
     { icon: Globe, top: '50%', left: '8%', dur: 8, dx: 16, dy: -12, color: '#22d3ee' },
-    { icon: Figma, top: '20%', left: '25%', dur: 11, dx: -8, dy: 22, color: '#e879f9' },
+    { icon: Figma, top: '20%', left: '25%', dur: 11, dx: -8, dy: 22, color: '#67e8f9' },
     { icon: GitBranch, top: '65%', left: '15%', dur: 10, dx: 12, dy: -18, color: '#f97316' },
     { icon: Layers, top: '15%', right: '10%', dur: 9, dx: -12, dy: 18, color: '#60a5fa' },
     { icon: Zap, top: '30%', right: '15%', dur: 7, dx: 16, dy: -10, color: '#fbbf24' },
-    { icon: Server, top: '55%', right: '5%', dur: 10, dx: -10, dy: 20, color: '#a78bfa' },
+    { icon: Server, top: '55%', right: '5%', dur: 10, dx: -10, dy: 20, color: '#06b6d4' },
     { icon: Database, top: '45%', right: '25%', dur: 9, dx: 12, dy: 14, color: '#0ea5e9' },
-    { icon: Layout, top: '75%', right: '12%', dur: 7, dx: -8, dy: -18, color: '#e879f9' },
+    { icon: Layout, top: '75%', right: '12%', dur: 7, dx: -8, dy: -18, color: '#67e8f9' },
 ];
 
 const socialLinks = [
     { icon: Linkedin, href: 'https://linkedin.com/in/', label: 'LinkedIn', color: '#0a66c2' },
-    { icon: Github, href: 'https://github.com/', label: 'GitHub', color: '#a78bfa' },
+    { icon: Github, href: 'https://github.com/', label: 'GitHub', color: '#06b6d4' },
 ];
 
 const roles = [
@@ -163,7 +163,7 @@ const Hero = () => {
                         and I'm a{' '}
                         <span className="font-semibold text-white ml-2">
                             {displayText}
-                            <span className="animate-pulse text-fuchsia-400">|</span>
+                            <span className="animate-pulse text-blue-400">|</span>
                         </span>
                     </p>
 
@@ -176,7 +176,7 @@ const Hero = () => {
                         </button>
                         <button
                             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-fuchsia-600/90 to-brand-600/90 hover:from-fuchsia-500 hover:to-brand-500 shadow-[0_0_30px_rgba(217,70,239,0.5)] border border-white/20 backdrop-blur-xl transition-all duration-300"
+                            className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-600/90 to-blue-600/90 hover:from-cyan-500 hover:to-blue-500 shadow-[0_0_30px_rgba(59,130,246,0.5)] border border-white/20 backdrop-blur-xl transition-all duration-300"
                         >
                             Contact Me
                         </button>

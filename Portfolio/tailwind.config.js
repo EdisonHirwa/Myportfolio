@@ -13,43 +13,43 @@ export default {
             },
             colors: {
                 /* ── Image theme colors ── */
-                'brand-dark': '#080c14',
-                'brand-blue': '#132644',
+                'brand-dark': '#010409',
+                'brand-blue': '#001a2c',
                 'brand-gold': '#f5a623',
 
-                /* ── Brand Violet (primary) ── */
+                /* ── Brand Cyan (primary) ── */
                 brand: {
-                    50: '#f5f3ff',
-                    100: '#ede9fe',
-                    200: '#ddd6fe',
-                    300: '#c4b5fd',
-                    400: '#a78bfa',
-                    500: '#8b5cf6',   /* main */
-                    600: '#7c3aed',
-                    700: '#6d28d9',
-                    800: '#5b21b6',
-                    900: '#4c1d95',
-                },
-                /* ── Accent Fuchsia ── */
-                fuchsia: {
-                    400: '#e879f9',
-                    500: '#d946ef',
-                    600: '#c026d3',
-                },
-                /* ── Highlight Cyan ── */
-                highlight: {
+                    50: '#ecfeff',
+                    100: '#cffafe',
+                    200: '#a5f3fc',
+                    300: '#67e8f9',
                     400: '#22d3ee',
-                    500: '#06b6d4',
+                    500: '#06b6d4',   /* main */
                     600: '#0891b2',
+                    700: '#0e7490',
+                    800: '#155e75',
+                    900: '#164e63',
+                },
+                /* ── Accent Blue ── */
+                blue: {
+                    400: '#60a5fa',
+                    500: '#3b82f6',
+                    600: '#2563eb',
+                },
+                /* ── Highlight Teal ── */
+                highlight: {
+                    400: '#2dd4bf',
+                    500: '#14b8a6',
+                    600: '#0d9488',
                 },
             },
             backgroundImage: {
                 'noise': "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')",
-                'spectral': 'conic-gradient(from 180deg at 50% 50%, #1e1040 0deg, #22d3ee 72deg, #f97316 144deg, #e879f9 216deg, #8b5cf6 288deg, #1e1040 360deg)',
-                'gradient-brand': 'linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%)',
-                'gradient-brand-alt': 'linear-gradient(135deg, #7c3aed 0%, #c026d3 50%, #06b6d4 100%)',
-                'gradient-hero': 'radial-gradient(ellipse at 30% 20%, #1e1040 0%, #09090b 55%)',
-                'gradient-card': 'linear-gradient(145deg, rgba(139,92,246,0.08) 0%, rgba(217,70,239,0.05) 100%)',
+                'spectral': 'conic-gradient(from 180deg at 50% 50%, #010409 0deg, #3b82f6 72deg, #f97316 144deg, #60a5fa 216deg, #06b6d4 288deg, #010409 360deg)',
+                'gradient-brand': 'linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%)',
+                'gradient-brand-alt': 'linear-gradient(135deg, #0891b2 0%, #2563eb 50%, #3b82f6 100%)',
+                'gradient-hero': 'radial-gradient(ellipse at 30% 20%, #010409 0%, #09090b 55%)',
+                'gradient-card': 'linear-gradient(145deg, rgba(6,182,212,0.08) 0%, rgba(59,130,246,0.05) 100%)',
             },
             animation: {
                 'fade-in': 'fadeIn 0.8s ease-out forwards',
@@ -97,10 +97,10 @@ export default {
             },
             boxShadow: {
                 'lens': 'inset 0 0 40px rgba(255, 255, 255, 0.1), 0 10px 40px rgba(0, 0, 0, 0.3)',
-                'brand-sm': '0 0 20px rgba(139,92,246,0.15)',
-                'brand-md': '0 0 40px rgba(139,92,246,0.25)',
-                'brand-lg': '0 0 80px rgba(139,92,246,0.35)',
-                'fuchsia-sm': '0 0 20px rgba(217,70,239,0.15)',
+                'brand-sm': '0 0 20px rgba(6,182,212,0.15)',
+                'brand-md': '0 0 40px rgba(6,182,212,0.25)',
+                'brand-lg': '0 0 80px rgba(6,182,212,0.35)',
+                'blue-sm': '0 0 20px rgba(59,130,246,0.15)',
             },
         },
     },

@@ -165,7 +165,7 @@ const tools = [
 /* ─── Tool Card ─── */
 const ToolCard = ({ name, icon: Icon, bg, border, hoverBorder, color }) => (
     <div
-        className={`glass-card ${bg} border ${border} ${hoverBorder} p-6 flex flex-col items-center gap-4 hover:-translate-y-2 transition-all duration-300 group cursor-default`}
+                                                                                                                                                                className={`glass-card bg-brand-900/[0.05] border border-brand-500/20 hover:border-brand-400/50 p-6 flex flex-col items-center gap-4 hover:-translate-y-2 transition-all duration-300 group cursor-default`}
     >
         {/* Icon wrapper */}
         <div className="p-3 rounded-2xl bg-white/[0.04] group-hover:bg-white/[0.08] transition-colors group-hover:scale-110 transform duration-300">
@@ -175,7 +175,7 @@ const ToolCard = ({ name, icon: Icon, bg, border, hoverBorder, color }) => (
         <h3 className="text-white font-semibold text-sm text-center">{name}</h3>
         {/* Accent line */}
         <div
-            className={`w-8 h-0.5 rounded-full bg-gradient-to-r ${color} opacity-40 group-hover:opacity-100 group-hover:w-14 transition-all duration-400`}
+            className={`w-8 h-0.5 rounded-full bg-gradient-to-r from-brand-400 to-blue-400 opacity-40 group-hover:opacity-100 group-hover:w-14 transition-all duration-400`}
         />
     </div>
 );
@@ -183,7 +183,7 @@ const ToolCard = ({ name, icon: Icon, bg, border, hoverBorder, color }) => (
 /* ─── Skills Section ─── */
 const Skills = () => {
     return (
-        <section id="skills" className="section-padding relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #09090b 0%, #0c0818 50%, #09090b 100%)' }}>
+        <section id="skills" className="section-padding relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #09090b 0%, #001a2c 50%, #09090b 100%)' }}>
             {/* ambient orb */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-600/[0.05] rounded-full blur-[120px] pointer-events-none" />
 
@@ -194,9 +194,9 @@ const Skills = () => {
                         What I work with
                     </p>
                     <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
-                        Tools &amp; <span className="gradient-text">Platforms</span>
+                        Tools &amp; <span className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#00c2cb_0%,#06b6d4_50%,#3b82f6_100%)]">Platforms</span>
                     </h2>
-                    <div className="w-16 h-1 rounded-full mx-auto mb-6" style={{ background: 'linear-gradient(90deg, #8b5cf6, #d946ef)' }} />
+                    <div className="w-16 h-1 rounded-full mx-auto mb-6 bg-[linear-gradient(90deg,#00c2cb,#06b6d4)]" />
                     <p className="text-zinc-400 max-w-xl mx-auto text-base sm:text-lg">
                         The technologies and tools I use to build modern, responsive web applications.
                     </p>
@@ -210,10 +210,10 @@ const Skills = () => {
                 </div>
 
                 {/* Bottom banner */}
-                <div className="mt-12 glass-card p-6 sm:p-8 text-center border-brand-500/15 bg-gradient-to-r from-brand-500/[0.05] to-fuchsia-500/[0.05]">
+                <div className="mt-12 glass-card p-6 sm:p-8 text-center border-brand-500/15 bg-gradient-to-r from-brand-500/[0.05] to-blue-500/[0.05]">
                     <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
                         Always learning.{' '}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400 font-semibold">Currently exploring</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 font-semibold">Currently exploring</span>
                         {' '}Node.js, Next.js, and full-stack web development.
                     </p>
                 </div>

@@ -22,7 +22,7 @@ const Footer = () => {
     return (
         <footer className="relative bg-zinc-950 border-t border-white/[0.05]">
             {/* Top gradient line */}
-            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #8b5cf660, #d946ef60, transparent)' }} />
+            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #06b6d460, #22d3ee60, transparent)' }} />
 
             <div className="max-container px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid sm:grid-cols-3 gap-8 mb-10">
@@ -50,7 +50,7 @@ const Footer = () => {
                                         onClick={(e) => handleClick(e, href)}
                                         className="text-zinc-400 hover:text-brand-400 text-sm transition-colors duration-200 flex items-center gap-1.5 group"
                                     >
-                                        <span className="w-0 group-hover:w-3 h-px bg-gradient-to-r from-brand-400 to-fuchsia-400 transition-all duration-300 rounded-full" />
+                                        <span className="w-0 group-hover:w-3 h-px bg-gradient-to-r from-brand-400 to-blue-400 transition-all duration-300 rounded-full" />
                                         {label}
                                     </a>
                                 </li>
@@ -85,7 +85,7 @@ const Footer = () => {
                     </p>
                     <p className="text-zinc-600 text-sm flex items-center gap-1.5">
                         Built with{' '}
-                        <Heart size={11} className="text-fuchsia-500 fill-fuchsia-500" />{' '}
+                        <Heart size={11} className="text-blue-500 fill-blue-500" />{' '}
                         using React & Tailwind CSS
                     </p>
                 </div>

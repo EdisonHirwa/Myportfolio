@@ -23,12 +23,12 @@
   /* ── Gradient text ── */
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #a78bfa 0%, #e879f9 60%, #22d3ee 100%);
+    background-image: linear-gradient(135deg, #06b6d4 0%, #67e8f9 60%, #22d3ee 100%);
   }
 
   /* ── Brand gradient border wrapper ── */
   .gradient-border {
-    background: linear-gradient(135deg, #8b5cf6, #d946ef, #06b6d4);
+    background: linear-gradient(135deg, #06b6d4, #22d3ee, #06b6d4);
     padding: 1.5px;
     border-radius: 14px;
   }
@@ -51,11 +51,11 @@
 
   /* ── Glow utilities ── */
   .glow-brand {
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.35), 0 0 60px rgba(139, 92, 246, 0.15);
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.35), 0 0 60px rgba(6, 182, 212, 0.15);
   }
 
-  .glow-fuchsia {
-    box-shadow: 0 0 30px rgba(217, 70, 239, 0.35), 0 0 60px rgba(217, 70, 239, 0.15);
+  .glow-blue {
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.35), 0 0 60px rgba(6, 182, 212, 0.15);
   }
 
   .glow-cyan {
@@ -102,7 +102,7 @@
 }
 
 /* ══════════════════════════════════════
-   Custom scrollbar — brand violet
+   Custom scrollbar — brand cyan
 ══════════════════════════════════════ */
 ::-webkit-scrollbar {
   width: 5px;
@@ -113,12 +113,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #8b5cf6, #d946ef);
+  background: linear-gradient(180deg, #06b6d4, #22d3ee);
   border-radius: 99px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #a78bfa, #e879f9);
+  background: linear-gradient(180deg, #06b6d4, #67e8f9);
 }
 
 /* ══════════════════════════════════════
