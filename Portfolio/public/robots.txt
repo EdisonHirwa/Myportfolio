@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hirwaedison.dev/sitemap.xml

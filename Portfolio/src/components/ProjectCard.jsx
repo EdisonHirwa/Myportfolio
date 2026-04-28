@@ -11,6 +11,7 @@ const ProjectCard = ({ title, description, image, tags, githubUrl, liveUrl }) =>
                 <img
                     src={image}
                     alt={`${title} screenshot`}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {/* Gradient overlay */}

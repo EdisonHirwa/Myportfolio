@@ -72,6 +72,7 @@ const About = () => {
                                     <img
                                         src={profileImg}
                                         alt="Edison Hirwa"
+                                        loading="lazy"
                                         className="relative w-20 h-20 rounded-full object-cover border-2 border-zinc-800"
                                     />
                                 </div>
